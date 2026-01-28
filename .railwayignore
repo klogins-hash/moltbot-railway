@@ -1,0 +1,83 @@
+# Railway deployment ignore file
+# These files/folders will be ignored during Railway builds
+
+# Version control
+.git
+.gitignore
+.gitattributes
+
+# Documentation
+docs/
+README.md
+README-header.png
+CHANGELOG.md
+CONTRIBUTING.md
+SECURITY.md
+CLAUDE.md
+LICENSE
+
+# Development
+.env.local
+.env.*.local
+.vs
+.vscode
+*.swp
+*.swo
+*~
+
+# Build artifacts (will be built fresh)
+dist/
+.tsc
+
+# Testing
+test/
+vitest.*.config.ts
+.coverage
+
+# Node modules (will be installed fresh)
+node_modules/
+
+# macOS specific
+.DS_Store
+.agent/
+
+# Apps (not needed for gateway)
+apps/macos/
+apps/ios/
+apps/android/
+Swabble/
+
+# Optional/Development only
+.pre-commit-config.yaml
+.shellcheckrc
+.swiftformat
+.swiftlint.yml
+.prettierignore
+.secrets.baseline
+.detect-secrets.cfg
+
+# CI/CD
+.github/
+
+# Docker files (not needed in container)
+.dockerignore
+Dockerfile.sandbox
+Dockerfile.sandbox-browser
+docker-compose.yml
+docker-setup.sh
+
+# Package manager lock files (frozen-lockfile used)
+# Keep pnpm-lock.yaml for reproducible builds
+# pnpm-lock.yaml - KEEP THIS
+
+# Fly.io config (not Railway)
+fly.toml
+fly.private.toml
+
+# Render.com config (alternative platform)
+render.yaml
+
+# Temporary files
+*.log
+*.pid
+*.seed
